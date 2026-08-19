@@ -77,7 +77,7 @@ const VISUAL_SCAN_DEPTH_LIMIT = 4;
 const UPDATE_HOST = (process.env.IMPECCABLE_UPDATE_HOST || 'https://impeccable.style').replace(/\/$/, '');
 const UPDATE_CACHE_PATH =
   process.env.IMPECCABLE_UPDATE_CACHE || path.join(os.homedir(), '.impeccable', 'update-check.json');
-const CHECK_INTERVAL_MS = 24 * 60 * 60 * 1000; // throttle the network poll to once a day
+const CHECK_INTERVAL_MS = 30 * 24 * 60 * 60 * 1000; // immo24: Update-Poll auf einmal im Monat gedrosselt (Original: taeglich)
 const RENOTIFY_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; // don't re-surface the same version for a week
 const FETCH_TIMEOUT_MS = 1200;
 
